@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>个人主页</title>
+    <link rel="stylesheet" href="./css/style2.css">
+    <link rel="stylesheet" href="./css/style3.css">
+    <link rel="stylesheet" href="./css/style4.css">
+  </head>
+
+    <!-- 在页面顶部添加一个锚点 -->
+  <a id="top"></a>
+  <body>
+    <div class="container">
+    <!-- 头部：导航 -->
+    <header>
+      <nav>
+        <a href="#about">关于</a>
+        <a href="#skills">技能</a>
+        <a href="#education">教育</a>
+        <a href="#projects">项目</a>
+        <a href="#hobby">爱好</a>
+      </nav>
+      <hr>
+    </header>
+
+    <!-- 主体：侧边栏 + 内容区（Flexbox） -->
+    <div class="layout">
+      <aside class="sidebar">
+        <h1>唐 卓</h1>
+        <img src="images/头像.jpg" alt="无法显示图片" class="circle-img">
+        <p>
+          邮箱：<a href="mailto:tangz@mail.ustc.edu.cn">tangz@mail.ustc.edu.cn</a><br>
+          电话：<a href="tel:+8617581331339">+86 175 8133 1339</a><br>
+          GitHub: <a href="https://github.com/mr-tongs" target="_blank" rel="noopener">mr-tongs</a>
+        </p>
+      </aside>
+
+      <main class="main-area">
+      <!-- 个人简介 -->
+      <section id="about" class="element">
+        <h2>关于我</h2>
+        <p>我是 iGEM - Web 组成员唐卓，一名普通大学生，对网页制作、算法、硬件开发等感兴趣。
+          这是第一次尝试用github部署主页。</p>
+      </section>
+
+      <!-- 技能 -->
+      <section id="skills" class="element">
+        <h2>技能</h2>
+        <div class="skills-grid">
+          <div class="skill-item">前端: HTML, CSS</div>
+          <div class="skill-item">工具: Git, VS Code, npm</div>
+          <div class="skill-item">语言: C, C++, Python</div>
+          <div class="skill-item">其他: Keil 5, Proteus 8, Wolfram Mathematica</div>
+        </div>
+      </section>
+
+      <!-- 教育 -->
+      <section id="education" class="element">
+        <h2>教育</h2>
+        <h3>中国科学技术大学</h3>
+        <ul>
+          <li>网络空间安全 | 2024 - 2028</li>
+          <li>主修课程：数据结构、密码学</li>
+        </ul>
+      </section>
+
+      <!-- 项目经验 -->
+      <section id="projects" class="element">
+        <h2>项目经验</h2>
+        <h3>数据结构课程项目</h3>
+        <ul>
+          <li>利用C语言的easyx图形库完成knight_tour(马踏棋盘)的可视化</li>
+        </ul>
+      </section>
+
+      <!-- 兴趣爱好 -->
+      <section id="hobby" class="element">
+        <h2>兴趣爱好</h2>
+        <p>乒乓球 · 台球 · 跑步</p>
+      </section>
+      </main>
+    </div>
+    <hr />
+
+    <!-- 页脚 -->
+    <footer>
+      <p>
+        <a href="words/test.pdf" target="_blank" rel="noopener">下载 PDF 版本</a>
+      </p>
+    </footer>
+    </div>
+    <!-- 返回顶部按钮（仅移动端可见） -->
+    <a href="#top" class="back-to-top" aria-label="返回顶部">↑</a>
+    </script>
+  </body>
+</html>

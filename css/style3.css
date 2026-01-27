@@ -1,0 +1,59 @@
+/* 渐变边框卡片类：使用伪元素创建细微渐变边框并保留内边距 实现动态效果*/
+.element {
+    /* 基础样式 */
+    margin: 20px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 5px 10px;
+    border-radius: 12px;
+    border-left: 4px solid #0066cc;
+    background: white;
+    transition: background-color 0.3s ease;
+    
+    /* 使用伪元素创建渐变边框 */
+    position: relative;
+    z-index: 1;
+}
+
+.element::before {
+    content: ''; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 12px;
+
+    /* 白色渐变边框（可改成其他颜色或透明度） */
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 1) 0%,
+        rgba(255, 255, 255, 0) 50%,
+        rgba(255, 255, 255, 1) 100%
+    );
+
+    z-index: -1;
+    padding: 2px; /* 边框厚度 */
+    -webkit-mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+}
+
+/* 悬停效果：微调渐变透明度以增强反馈 */
+.element:hover::before {
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 1) 0%,
+        rgba(255, 255, 255, 0.5) 50%,
+        rgba(255, 255, 255, 1) 100%
+    );
+}
+
+/* 可选：轻微的浮动动画，增强交互感 */
+.element:hover {
+    transform: translateY(-4px);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    background-color: rgba(0, 123, 255, 0.1); /* 悬停时背景颜色变化 */
+}

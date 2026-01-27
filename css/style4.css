@@ -1,0 +1,124 @@
+/* 响应式布局 完成任务三增添部分*/
+/* ===== 移动优先设计 ===== */
+
+/* 基础样式（手机） */
+.container {
+  max-width: 100%;
+  padding: 15px;
+}
+
+header nav {
+  flex-direction: row; /*保持导航项在一行*/
+  gap: 10px;
+}
+
+/* 更友好的导航触控目标 */
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/* 主布局：移动端纵向排列 */
+.layout {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sidebar {
+  text-align: center;
+  border-right: 3px solid #ddd;
+}
+
+.main-area {
+  width: 100%;
+}
+
+/* 技能网格 */
+.skills-grid {
+  display: flex;
+  flex-direction: column; /*移动端垂直分布*/
+  gap: 15px;
+}
+
+.skill-item {
+  /*单个网格样式*/
+  background: #f7f9fc;
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+}
+
+/* 返回顶部按钮（默认移动端可见） */
+.back-to-top {
+  position: fixed; /* 1. 固定定位 - 始终在屏幕固定位置 */
+  right: 16px; /* 2. 距离右边16像素 */
+  bottom: 20px; /* 3. 距离底部20像素 */
+  width: 44px; /* 4. 宽度44像素 */
+  height: 44px; /* 5. 高度44像素 - 保持正方形 */
+  border-radius: 22px; /* 6. 圆角22px - 等于高度一半，形成圆形 */
+  border: none; /* 7. 无边框 */
+  background: rgba(0, 0, 0, 0.7); /* 8. 背景：黑色70%透明度 */
+  color: #fff; /* 9. 文字颜色白色 */
+  font-size: 20px; /* 10. 字体大小20像素 */
+  display: flex;
+  align-items: center; /* 12. 垂直居中 - 但需要flex才有效 */
+  justify-content: center; /* 13. 水平居中 - 但需要flex才有效 */
+  cursor: pointer; /* 14. 鼠标悬停时显示手型光标 */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* 15. 阴影效果 */
+  z-index: 9999; /* 16. 层级9999 - 确保在最上层 */
+}
+
+/* ===== 平板及以上 ===== */
+@media (min-width: 768px) {
+  .container {
+    padding: 30px;
+  }
+
+  header nav {
+    flex-direction: row; /* 水平排列 */
+    gap: 20px;
+  }
+
+  .skills-grid {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .skill-item {
+    flex: 1 1 45%; /* 两栏布局 */
+  }
+}
+
+/* ===== 桌面端 ===== */
+@media (min-width: 1024px) {
+  .container {
+    max-width: 900px;
+    margin: 0 auto; /* 水平居中 */
+    padding: 60px 40px;
+  }
+
+  .skill-item {
+    flex: 1 1 27%; /* 三栏布局 */
+  }
+
+  /* 桌面布局：侧边栏 + 主区 横向排列 */
+  .layout {
+    flex-direction: row;
+    align-items: flex-start; /* 顶部对齐 */
+    gap: 40px; /* 两栏间距 */
+  }
+  .sidebar {
+    flex: 0 0 260px; /* 固定宽度260px，不伸缩 */
+    text-align: center; /* 文本居中 */
+  }
+  .main-area {
+    flex: 1 1 auto; /* 占据剩余所有空间 */
+  }
+
+  /* 在平板/桌面隐藏返回顶部按钮 */
+  .back-to-top {
+    display: none;
+  }
+}

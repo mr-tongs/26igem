@@ -1,0 +1,69 @@
+/* 基础样式 完成任务二时使用的CSS样式 */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+header {
+    text-align: center;
+    padding: 10px 0;
+}
+
+h1 {
+    color: #203243; /* 深色用于主标题 */
+    font-family: 'Arial', sans-serif;
+    font-size: 36px;
+    text-align: center;
+}
+
+h2 {
+    color: #2d4863; /* 中等深色用于副标题 */
+    font-family: 'Arial', sans-serif;
+    font-size: 24px;
+}
+
+h3 {
+    color: rgb(87, 124, 126); /* 浅色用于次级标题 */
+    font-family: 'Arial', sans-serif;
+    font-size: 20px;
+}
+
+p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+    font-family: 'microsoft yahei';
+}
+
+ul {
+    color: #333;
+    line-height: 1.6;
+    font-family: 'microsoft yahei';
+}
+
+a {
+    transition: color 0.3s;
+    text-decoration: none; 
+}
+a:hover {
+    color: #3d6693;
+    text-decoration-line: underline;
+}
+
+/* 基础圆形 */
+.circle-img {
+    width: 120px;
+    border-radius: 50%; /* 关键属性 */
+    object-fit: cover; /* 防止图片变形 */
+}
+ /* 页脚 */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    color: #999;
+    font-size: 14px;
+}
