@@ -1,4 +1,4 @@
-/* 基础样式 完成任务二时使用的CSS样式 */
+/* 基础样式 */
 .container {
     max-width: 800px;
     margin: 0 auto;
@@ -47,11 +47,11 @@ ul {
 
 a {
     transition: color 0.3s;
-    text-decoration: none; 
+    text-decoration: none;   /* 去掉默认下划线 */
 }
 a:hover {
-    color: #3d6693;
-    text-decoration-line: underline;
+    color: #3d6693; /* 悬停时改变文字颜色 */
+    text-decoration-line: underline;    /* 添加下划线 */
 }
 
 /* 基础圆形 */
